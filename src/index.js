@@ -4,6 +4,6 @@ import '@/index.less'
 
 const root = ReactDOM.createRoot(document.getElementById('root'))
 root.render(
-  <div>第二次reactceshis</div>
+  <div>第二次react   ceshis</div>
 )
 
