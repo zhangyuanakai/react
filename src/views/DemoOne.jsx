@@ -13,7 +13,6 @@ const DemoOne = (props) => {
     let { slot } = child?.props
     if (slot === 'header') {
       headerSlot.push(child)
-      console.log(headerSlot,'headerSlot')
     } else if (slot === 'footer') {
       footerSlot.push(child)
     } else {
