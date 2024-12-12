@@ -5,9 +5,9 @@
   <title>合成事件</title>
 </head>
 <body>
-<div id="root" class="center" style="width: 200px;height: 200px;background: aqua">
-  <div id="outer" class="center" style="width: 100px;height: 100px;background:palegoldenrod">
-    <div id="inner" class="center" style="width: 50px;height: 50px;background:violet">
+<div id="root" class="center" style="width: 200px;height: 200px;background: aqua" onClick={console.log('root原生')}>
+  <div id="outer" class="center" style="width: 100px;height: 100px;background:palegoldenrod" onClick={console.log('outer原生')}>
+    <div id="inner" class="center" style="width: 50px;height: 50px;background:violet" onClick={console.log('inner原生')}>
     </div>
   </div>
 </div>
@@ -21,6 +21,8 @@
   outer.onClickCapture = () => { console.log('outer[捕获【合成】]'); };
   inner.onClick = () => { console.log('inner 冒泡合成'); };
   inner.onClickCapture = () => { console.log('inner[捕获【合成】]'); };
+  root.onClick = () => { console.log('root 冒泡合成'); };
+  root.onClickCapture = () => { console.log('root[捕获【合成】]'); };
   //   给root 做事件绑定
   root.addEventListener('click', (ev) => {
     let path = ev.composedPath();//path【事件源-》。。。-》window】

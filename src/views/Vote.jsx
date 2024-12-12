@@ -1,19 +1,33 @@
-const Vote = (props) => {
-  let { title } = props
-  return <div className="vote-box">
-    <div className="header">
-      <h3 className="title">{ title }</h3>
-      <span>10人</span>
-    </div>
-    <div className="main">
-      <p>支持人数：8人</p>
-      <p>反对人数：2人</p>
-    </div>
-    <div className="main">
-      <button>支持</button>
-      <button>反对</button>
-    </div>
-  </div>
+import React, { Component, useState } from 'react'
 
+// 函数组件
+const Vote = () => {
+  let [num, setNum] = useState(0)
+  const handleChange = (e) => {
+    setNum(num + 10)
+  }
+  return <div>
+    <span>{ num }</span>
+    <button onClick={ handleChange }>新增</button>
+  </div>
 }
 export default Vote
+
+//类组件
+// class Vote extends Component {
+//   state = { num: 0 }
+//   handle = () => {
+//     let { num } = this.state
+//     this.setState({ num: num + 10 })
+//   }
+//
+//   render() {
+//     let { num } = this.state
+//     return <div className="vote">
+//       <span>{ num }</span>
+//       <button onClick={ this.handle }>点击事件</button>
+//     </div>
+//   }
+// }
+//
+// export default Vote
