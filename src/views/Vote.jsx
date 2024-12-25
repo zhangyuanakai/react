@@ -1,4 +1,4 @@
-import React, { Component, useState } from 'react'
+import React, { Component, useContext, useState } from 'react'
 
 // 函数组件
 const Vote = () => {
