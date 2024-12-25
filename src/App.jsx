@@ -18,7 +18,7 @@ const NavBox = styled.nav`
 `
 // const App = () => {
 //   // 基于<HashRouter>把所有要渲染的内容包起来，开启Hash路由
-//   //   +后期用到<route>，<link>等，都需要再HashRouter中使用
+//   //   +后期用到<route>，  <link>等，都需要再HashRouter中使用
 //   //   +开启后，整个页面地址，默认会设置一个 #/哈希值
 //
 //   // Link实现路由切换、跳转的组件
