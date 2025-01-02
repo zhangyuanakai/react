@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width,
+        initial-scale=1.0,
+         maximum-scale=1.0,
+          minimum-scale=1.0,
+          user-scalable=no">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>REM练习</title>
+  <!--  IMport CSS-->
+  <link rel="stylesheet" href="src/assets/reset.min.css">
+  <style>
+    html {
+      font-size: 100px;
+    }
+
+    html,body{
+      min-height: 100%;
+      background: #f4f4f4;
+    }
+    #root {
+      margin: 0 auto;
+      max-width: 750px;
+      min-height: 100%;
+      background: #fff;
+    }
+
+    .box {
+      width: 3.28rem;
+      height: 1.64rem;
+      line-height: 1.64rem;
+      text-align: center;
+      font-size: .4rem;
+      background: lightblue;
+    }
+  </style>
+  <script>
+    //计算当前设备下，REM和PX的换算比例
+    (function () {
+      const computed = () => {
+        let html = document.documentElement,
+          deviceW = html.clientWidth,
+          designW = 750
+        if (deviceW >= designW) {
+          html.style.fontSize = '100px'
+          return
+        }
+        let ratio = deviceW * 100 / designW
+        html.style.fontSize = ratio + 'px'
+      }
+      computed()
+      window.addEventListener('resize', computed)
+    })()
+
+  </script>
+</head>
+<body>
+<div id="root">
+  <div class="box">
+    珠峰培训
+  </div>
+</div>
+
+</body>
+</html>

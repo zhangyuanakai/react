@@ -1,0 +1,19 @@
+.Page404-box {
+  height: 100vh;
+  width: 100%;
+
+  .btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+  }
+
+  .adm-error-block {
+    --adm-error-block-image-height:400px;
+  }
+
+  .button {
+    margin-right: 10px;
+  }
+}
