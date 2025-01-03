@@ -8,7 +8,7 @@ const NavBarAgain = (props) => {
     location = useLocation(),
     [usp] = useSearchParams()
   const handleBack = () => {
-    // 特殊：登录也   &to的值是/detail/xxx
+    // 特殊：登    录也   &to的值是/detail/xxx
     let to = usp.get('to')
     if (location.pathname === '/login' && /^\/detail\/\d+$/.test(to)) {
       navigate(to, { replace: true })
